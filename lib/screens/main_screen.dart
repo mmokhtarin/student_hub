@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
     ];
 
     final List<String> titles = [
-      'StudentHub Home',
+      'StudentHub - Dashboard Portal',
       'Student Information',
       'Student Records',
       'Programmes',
