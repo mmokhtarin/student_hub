@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Centralized academic management portal for tracking students, records, and departmental statistics.',
+                    'Centralized academic management portal for tracking students, records and departmental statistics.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onPrimaryContainer,
@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                 child: _buildSummaryCard(
                   context,
                   title: 'Active Programmes',
-                  value: '4',
+                  value: '${appState.activeProgrammesCount}',
                   icon: Icons.auto_stories,
                   color: Colors.teal,
                 ),
@@ -81,28 +81,21 @@ class HomePage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          Row(
-            children: [
-              Expanded(
+          Wrap(
+            spacing: 12,
+            runSpacing: 12,
+            children: appState.uniqueProgrammes.map((programme) {
+              return SizedBox(
+                width: (MediaQuery.of(context).size.width - 44) / 2,
                 child: _buildSummaryCard(
                   context,
-                  title: 'Software Eng.',
-                  value: '${appState.countByProgramme("Software Engineering")}',
-                  icon: Icons.code,
+                  title: programme,
+                  value: '${appState.countByProgramme(programme)}',
+                  icon: Icons.school,
                   color: Colors.indigo,
                 ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _buildSummaryCard(
-                  context,
-                  title: 'Comp. Science',
-                  value: '${appState.countByProgramme("Computer Science")}',
-                  icon: Icons.memory,
-                  color: Colors.deepPurple,
-                ),
-              ),
-            ],
+              );
+            }).toList(),
           ),
           const SizedBox(height: 24),
           Text(

@@ -21,4 +21,10 @@ class AppStateProvider extends ChangeNotifier {
   int countByProgramme(String programmeName) {
     return _students.where((s) => s.programme == programmeName).length;
   }
+
+  List<String> get uniqueProgrammes {
+    return _students.map((s) => s.programme).toSet().toList();
+  }
+
+  int get activeProgrammesCount => uniqueProgrammes.length;
 }
