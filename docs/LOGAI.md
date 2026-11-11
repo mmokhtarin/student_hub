@@ -2,8 +2,9 @@
 
 Course: TMA3084 Software Engineering Laboratory
 Project: StudentHub Application (Lab Exercise 5.1)
-Group: Group01_T11
+Group: 01_T11
 Group leader: Muhammad Mokhtarin Bin Dawari (105256)
+Lab demo: MD. Aminul Islam Rakib
 
 ==================================================
 
