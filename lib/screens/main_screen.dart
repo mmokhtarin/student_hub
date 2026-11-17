@@ -6,7 +6,7 @@ import '../widgets/app_drawer.dart';
 import 'home_page.dart';
 import 'student_list_page.dart';
 import 'programmes_page.dart';
-
+import 'about_page.dart';
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
@@ -19,7 +19,7 @@ class MainScreen extends StatelessWidget {
       const StudentListPage(),
       const Center(child: Text('Student Records Page (Fer)')),
       const ProgrammesPage(),
-      const Center(child: Text('About / Profile Page (Damia :D)')),
+      const AboutPage(),
     ];
 
     final List<String> titles = [
@@ -27,7 +27,7 @@ class MainScreen extends StatelessWidget {
       'Student Information',
       'Student Records',
       'Programmes',
-      'About StudentHub',
+      'About',
     ];
 
     return Scaffold(
