@@ -21,9 +21,8 @@ class AboutPage extends StatelessWidget {
                   child: Image.network(
                     'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800',
                     fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) => Container(
-                      color: Colors.blue,
-                    ),
+                    errorBuilder: (context, error, stackTrace) =>
+                        Container(color: Colors.blue),
                   ),
                 ),
 
@@ -150,10 +149,7 @@ class AboutPage extends StatelessWidget {
                           'StudentHub is your centralized university companion—a unified space to manage student information, '
                           'view academic records, explore programmes, and stay connected with your campus community through '
                           'interactive data tables and dynamic navigation views.',
-                          style: TextStyle(
-                            color: Colors.black87,
-                            height: 1.4,
-                          ),
+                          style: TextStyle(color: Colors.black87, height: 1.4),
                         ),
                       ],
                     ),
