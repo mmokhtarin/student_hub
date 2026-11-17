@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/app_state_provider.dart';
 import '../widgets/app_drawer.dart';
 import 'home_page.dart';
+import 'student_record_page.dart';
 import 'student_list_page.dart';
 import 'programmes_page.dart';
 import 'about_page.dart';
@@ -18,7 +19,7 @@ class MainScreen extends StatelessWidget {
     final List<Widget> pages = [
       const HomePage(),
       const StudentListPage(),
-      const Center(child: Text('Student Records Page (Fer)')),
+      const StudentRecordPage(),
       const ProgrammesPage(),
       const AboutPage(),
     ];
